@@ -1,4 +1,4 @@
-# ToDo App Challenge
+# ToDo App
 
 Full Stack task management APP built with .NET 10 and React.
 
