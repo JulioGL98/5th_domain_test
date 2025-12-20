@@ -207,3 +207,4 @@ C:\Users\pepor\Downloads\Julio\5th_domain_test\Backend\obj\Debug\net10.0\ref\Bac
 C:\Users\pepor\Downloads\Julio\5th_domain_test\Backend\bin\Debug\net10.0\Swashbuckle.AspNetCore.Swagger.dll
 C:\Users\pepor\Downloads\Julio\5th_domain_test\Backend\bin\Debug\net10.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\pepor\Downloads\Julio\5th_domain_test\Backend\bin\Debug\net10.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\pepor\Downloads\Julio\5th_domain_test\Backend\bin\Debug\net10.0\BCrypt.Net-Next.dll

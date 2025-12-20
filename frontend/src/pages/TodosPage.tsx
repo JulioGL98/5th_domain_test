@@ -9,7 +9,6 @@ export const TodosPage = () => {
   const [todos, setTodos] = useState<TodoItem[]>([]);
   const [newTodo, setNewTodo] = useState('');
 
-  // NEW: State for handling inline editing
   const [editingId, setEditingId] = useState<number | null>(null);
   const [editTitle, setEditTitle] = useState('');
 
@@ -42,16 +41,12 @@ export const TodosPage = () => {
     }
   };
 
-  // NEW: Generic update function (handles both Title and Checkbox)
   const handleUpdate = async (updatedTodo: TodoItem) => {
     try {
-      // 1. Call API
       await todoService.update(updatedTodo);
 
-      // 2. Update local state
       setTodos(todos.map(t => (t.id === updatedTodo.id ? updatedTodo : t)));
 
-      // 3. Close edit mode
       setEditingId(null);
       setEditTitle('');
     } catch (error) {
@@ -59,13 +54,11 @@ export const TodosPage = () => {
     }
   };
 
-  // NEW: Start editing mode
   const startEditing = (todo: TodoItem) => {
     setEditingId(todo.id);
     setEditTitle(todo.title);
   };
 
-  // NEW: Cancel editing mode
   const cancelEditing = () => {
     setEditingId(null);
     setEditTitle('');
@@ -82,7 +75,6 @@ export const TodosPage = () => {
     }
   };
 
-  // NEW: Helper to format the date
   const formatDate = (dateString: string) => {
     if (!dateString) return '-';
     return new Date(dateString).toLocaleString('en-US', {
@@ -109,7 +101,6 @@ export const TodosPage = () => {
       </nav>
 
       <main className="max-w-5xl mx-auto mt-8 p-4">
-        {/* Add Task Form */}
         <form onSubmit={handleAdd} className="flex gap-4 mb-8">
           <input
             type="text"
@@ -126,14 +117,12 @@ export const TodosPage = () => {
           </button>
         </form>
 
-        {/* Task Table */}
         <div className="bg-white rounded-lg shadow overflow-hidden">
           <table className="w-full">
             <thead className="bg-gray-100 border-b">
               <tr>
                 <th className="p-4 text-left w-16">Status</th>
                 <th className="p-4 text-left">Task</th>
-                {/* NEW Column */}
                 <th className="p-4 text-left w-40">Created at</th>
                 <th className="p-4 text-right w-48">Actions</th>
               </tr>
@@ -142,7 +131,7 @@ export const TodosPage = () => {
               {todos.length === 0 ? (
                 <tr>
                   <td colSpan={4} className="p-8 text-center text-gray-400">
-                    No tasks yet. Add one above!
+                    No new tasks.
                   </td>
                 </tr>
               ) : (
@@ -151,7 +140,6 @@ export const TodosPage = () => {
 
                   return (
                     <tr key={todo.id} className="border-b last:border-0 hover:bg-gray-50">
-                      {/* Checkbox Column */}
                       <td className="p-4 text-center">
                         <input
                           type="checkbox"
@@ -162,7 +150,6 @@ export const TodosPage = () => {
                         />
                       </td>
 
-                      {/* Title Column (Input vs Text) */}
                       <td className="p-4">
                         {isEditing ? (
                           <input
@@ -183,12 +170,10 @@ export const TodosPage = () => {
                         )}
                       </td>
 
-                      {/* Date Column */}
                       <td className="p-4 text-sm text-gray-500">
                         {formatDate(todo.createdAt)}
                       </td>
 
-                      {/* Actions Column */}
                       <td className="p-4 text-right space-x-2">
                         {isEditing ? (
                           <>

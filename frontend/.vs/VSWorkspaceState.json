@@ -1,0 +1,14 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\src",
+    "\\src\\assets",
+    "\\src\\components",
+    "\\src\\context",
+    "\\src\\pages",
+    "\\src\\services",
+    "\\src\\types"
+  ],
+  "SelectedNode": "\\src\\pages\\LoginPage.tsx",
+  "PreviewInSolutionExplorer": false
+}

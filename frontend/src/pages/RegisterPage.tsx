@@ -1,14 +1,15 @@
-// src/pages/LoginPage.tsx
+// src/pages/RegisterPage.tsx
 import { useState } from 'react';
 import { useAuth } from '../context/AuthContext';
+import { authService } from '../services/authService';
 import { useNavigate, Link } from 'react-router-dom';
 
-export const LoginPage = () => {
+export const RegisterPage = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
-
-  const { login } = useAuth();
+  
+  const { login } = useAuth(); 
   const navigate = useNavigate();
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -16,10 +17,15 @@ export const LoginPage = () => {
     setError('');
 
     try {
+      await authService.register(username, password);
       await login(username, password);
-      navigate('/todos'); 
-    } catch (err) {
-      setError('Wrong credentials.');
+      navigate('/todos');
+    } catch (err: any) {
+      if (err.response && err.response.data) {
+        setError(typeof err.response.data === 'string' ? err.response.data : 'Registration failed');
+      } else {
+        setError('Something went wrong. Try again.');
+      }
     }
   };
 
@@ -27,7 +33,7 @@ export const LoginPage = () => {
     <div className="min-h-screen flex items-center justify-center bg-gray-100">
       <div className="bg-white p-8 rounded-lg shadow-md w-full max-w-sm">
         <h2 className="text-2xl font-bold mb-6 text-center text-gray-800">
-          Welcome
+          Create Account
         </h2>
 
         {error && (
@@ -44,7 +50,7 @@ export const LoginPage = () => {
             <input
               type="text"
               className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-              placeholder="Ex: admin"
+              placeholder="Choose a username"
               value={username}
               onChange={(e) => setUsername(e.target.value)}
               required
@@ -58,7 +64,7 @@ export const LoginPage = () => {
             <input
               type="password"
               className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-              placeholder="******"
+              placeholder="Choose a password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               required
@@ -67,16 +73,17 @@ export const LoginPage = () => {
 
           <button
             type="submit"
-            className="w-full bg-blue-600 text-white font-bold py-2 px-4 rounded-lg hover:bg-blue-700 transition duration-300"
+            className="w-full bg-green-600 text-white font-bold py-2 px-4 rounded-lg hover:bg-green-700 transition duration-300"
           >
-            Login
+            Register
           </button>
         </form>
-        <div className="mt-6 text-center text-sm border-t pt-4">
+        
+        <div className="mt-4 text-center text-sm">
           <p className="text-gray-600">
-            Don't have an account?{' '}
-            <Link to="/register" className="text-blue-600 font-bold hover:underline">
-              Register here
+            Already have an account?{' '}
+            <Link to="/login" className="text-blue-600 font-bold hover:underline">
+              Login here
             </Link>
           </p>
         </div>

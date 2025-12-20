@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "5uMVnvONaKU=",
+  "dgSpecHash": "OeImfLxlxtk=",
   "success": true,
   "projectFilePath": "C:\\Users\\pepor\\Downloads\\Julio\\5th_domain_test\\Backend\\Backend.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\pepor\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\pepor\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\pepor\\.nuget\\packages\\microsoft.aspnetcore.openapi\\10.0.1\\microsoft.aspnetcore.openapi.10.0.1.nupkg.sha512",
     "C:\\Users\\pepor\\.nuget\\packages\\microsoft.build\\17.7.2\\microsoft.build.17.7.2.nupkg.sha512",

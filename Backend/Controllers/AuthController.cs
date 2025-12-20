@@ -13,15 +13,31 @@ public class AuthController : ControllerBase
     {
         _authService = authService;
     }
+
     [HttpPost("login")]
-    public IActionResult Login([FromBody] LoginDto loginData)
+    public async Task<IActionResult> Login([FromBody] LoginDto loginData)
     {
-        var user = _authService.Login(loginData.Username, loginData.Password);
+        var user = await _authService.Login(loginData.Username, loginData.Password);
 
         if (user == null)
         {
-            return Unauthorized("Incorrect user or pass");
+            return Unauthorized("Invalid username or password.");
         }
+
         return Ok(user);
+    }
+
+    [HttpPost("register")]
+    public async Task<IActionResult> Register([FromBody] LoginDto registerData)
+    {
+        try
+        {
+            var user = await _authService.Register(registerData.Username, registerData.Password);
+            return CreatedAtAction(nameof(Login), new { id = user.Id }, user);
+        }
+        catch (Exception ex)
+        {
+            return BadRequest(ex.Message);
+        }
     }
 }

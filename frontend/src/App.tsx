@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { LoginPage } from './pages/LoginPage';
 import { TodosPage } from './pages/TodosPage';
 import { useAuth } from './context/AuthContext';
+import { RegisterPage } from './pages/RegisterPage';
 
 const PrivateRoute = ({ children }: { children: JSX.Element }) => {
   const { isAuthenticated } = useAuth();
@@ -13,7 +14,8 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/login" element={<LoginPage />} />       
+        <Route path="/login" element={<LoginPage />} />      
+        <Route path="/register" element={<RegisterPage />} />
         <Route 
           path="/todos" 
           element={

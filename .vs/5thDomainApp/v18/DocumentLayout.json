@@ -3,16 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\pepor\\Downloads\\Julio\\5th_domain_test\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\pepor\\Downloads\\Julio\\5th_domain_test\\frontend\\src\\pages\\LoginPage.tsx||{3B902123-F8A7-4915-9F01-361F908088D0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:frontend\\src\\pages\\LoginPage.tsx||{3B902123-F8A7-4915-9F01-361F908088D0}"
+      "AbsoluteMoniker": "D:0:0:{3127A34F-122F-4258-888D-22283122921F}|Backend\\Backend.csproj|c:\\users\\pepor\\downloads\\julio\\5th_domain_test\\backend\\controllers\\todoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3127A34F-122F-4258-888D-22283122921F}|Backend\\Backend.csproj|solutionrelative:backend\\controllers\\todoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\pepor\\Downloads\\Julio\\5th_domain_test\\frontend\\src\\main.tsx||{3B902123-F8A7-4915-9F01-361F908088D0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:frontend\\src\\main.tsx||{3B902123-F8A7-4915-9F01-361F908088D0}"
+      "AbsoluteMoniker": "D:0:0:{3127A34F-122F-4258-888D-22283122921F}|Backend\\Backend.csproj|c:\\users\\pepor\\downloads\\julio\\5th_domain_test\\backend\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3127A34F-122F-4258-888D-22283122921F}|Backend\\Backend.csproj|solutionrelative:backend\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\pepor\\Downloads\\Julio\\5th_domain_test\\frontend\\src\\context\\AuthContext.tsx||{3B902123-F8A7-4915-9F01-361F908088D0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:frontend\\src\\context\\AuthContext.tsx||{3B902123-F8A7-4915-9F01-361F908088D0}"
+      "AbsoluteMoniker": "D:0:0:{3127A34F-122F-4258-888D-22283122921F}|Backend\\Backend.csproj|c:\\users\\pepor\\downloads\\julio\\5th_domain_test\\backend\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3127A34F-122F-4258-888D-22283122921F}|Backend\\Backend.csproj|solutionrelative:backend\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3127A34F-122F-4258-888D-22283122921F}|Backend\\Backend.csproj|c:\\users\\pepor\\downloads\\julio\\5th_domain_test\\backend\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3127A34F-122F-4258-888D-22283122921F}|Backend\\Backend.csproj|solutionrelative:backend\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3127A34F-122F-4258-888D-22283122921F}|Backend\\Backend.csproj|c:\\users\\pepor\\downloads\\julio\\5th_domain_test\\backend\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3127A34F-122F-4258-888D-22283122921F}|Backend\\Backend.csproj|solutionrelative:backend\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3127A34F-122F-4258-888D-22283122921F}|Backend\\Backend.csproj|c:\\users\\pepor\\downloads\\julio\\5th_domain_test\\backend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3127A34F-122F-4258-888D-22283122921F}|Backend\\Backend.csproj|solutionrelative:backend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,7 +34,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -34,41 +46,80 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "LoginPage.tsx",
-              "DocumentMoniker": "C:\\Users\\pepor\\Downloads\\Julio\\5th_domain_test\\frontend\\src\\pages\\LoginPage.tsx",
-              "RelativeDocumentMoniker": "frontend\\src\\pages\\LoginPage.tsx",
-              "ToolTip": "C:\\Users\\pepor\\Downloads\\Julio\\5th_domain_test\\frontend\\src\\pages\\LoginPage.tsx",
-              "RelativeToolTip": "frontend\\src\\pages\\LoginPage.tsx",
-              "ViewState": "AgIAADwAAAAAAAAAAAAAAE0AAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2025-12-20T10:26:50.442Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "main.tsx",
-              "DocumentMoniker": "C:\\Users\\pepor\\Downloads\\Julio\\5th_domain_test\\frontend\\src\\main.tsx",
-              "RelativeDocumentMoniker": "frontend\\src\\main.tsx",
-              "ToolTip": "C:\\Users\\pepor\\Downloads\\Julio\\5th_domain_test\\frontend\\src\\main.tsx",
-              "RelativeToolTip": "frontend\\src\\main.tsx",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2025-12-20T10:25:02.897Z",
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\Users\\pepor\\Downloads\\Julio\\5th_domain_test\\Backend\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "Backend\\Controllers\\AuthController.cs",
+              "ToolTip": "C:\\Users\\pepor\\Downloads\\Julio\\5th_domain_test\\Backend\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "Backend\\Controllers\\AuthController.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAYwCEAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-20T15:40:18.123Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "AuthContext.tsx",
-              "DocumentMoniker": "C:\\Users\\pepor\\Downloads\\Julio\\5th_domain_test\\frontend\\src\\context\\AuthContext.tsx",
-              "RelativeDocumentMoniker": "frontend\\src\\context\\AuthContext.tsx",
-              "ToolTip": "C:\\Users\\pepor\\Downloads\\Julio\\5th_domain_test\\frontend\\src\\context\\AuthContext.tsx",
-              "RelativeToolTip": "frontend\\src\\context\\AuthContext.tsx",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAUAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2025-12-20T10:23:18.654Z",
+              "Title": "AuthService.cs",
+              "DocumentMoniker": "C:\\Users\\pepor\\Downloads\\Julio\\5th_domain_test\\Backend\\Services\\AuthService.cs",
+              "RelativeDocumentMoniker": "Backend\\Services\\AuthService.cs",
+              "ToolTip": "C:\\Users\\pepor\\Downloads\\Julio\\5th_domain_test\\Backend\\Services\\AuthService.cs",
+              "RelativeToolTip": "Backend\\Services\\AuthService.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAiwDAAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-20T15:38:09.914Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\pepor\\Downloads\\Julio\\5th_domain_test\\Backend\\Data\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "Backend\\Data\\AppDbContext.cs",
+              "ToolTip": "C:\\Users\\pepor\\Downloads\\Julio\\5th_domain_test\\Backend\\Data\\AppDbContext.cs",
+              "RelativeToolTip": "Backend\\Data\\AppDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-20T15:35:35.256Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\pepor\\Downloads\\Julio\\5th_domain_test\\Backend\\Models\\User.cs",
+              "RelativeDocumentMoniker": "Backend\\Models\\User.cs",
+              "ToolTip": "C:\\Users\\pepor\\Downloads\\Julio\\5th_domain_test\\Backend\\Models\\User.cs",
+              "RelativeToolTip": "Backend\\Models\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-20T15:34:59.793Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "TodosController.cs",
+              "DocumentMoniker": "C:\\Users\\pepor\\Downloads\\Julio\\5th_domain_test\\Backend\\Controllers\\TodosController.cs",
+              "RelativeDocumentMoniker": "Backend\\Controllers\\TodosController.cs",
+              "ToolTip": "C:\\Users\\pepor\\Downloads\\Julio\\5th_domain_test\\Backend\\Controllers\\TodosController.cs",
+              "RelativeToolTip": "Backend\\Controllers\\TodosController.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAA0wCMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-20T15:04:16.934Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\pepor\\Downloads\\Julio\\5th_domain_test\\Backend\\Program.cs",
+              "RelativeDocumentMoniker": "Backend\\Program.cs",
+              "ToolTip": "C:\\Users\\pepor\\Downloads\\Julio\\5th_domain_test\\Backend\\Program.cs",
+              "RelativeToolTip": "Backend\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-20T14:55:13.706Z",
               "EditorCaption": ""
             }
           ]
