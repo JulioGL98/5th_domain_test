@@ -114,7 +114,7 @@ export const TodosPage = () => {
           <input
             type="text"
             className="flex-1 p-3 border rounded-lg shadow-sm focus:ring-2 focus:ring-blue-500 outline-none"
-            placeholder="What needs to be done?"
+            placeholder="Add a new task"
             value={newTodo}
             onChange={(e) => setNewTodo(e.target.value)}
           />

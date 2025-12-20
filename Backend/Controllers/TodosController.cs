@@ -21,7 +21,7 @@ public class TodosController : ControllerBase
     public async Task<ActionResult<IEnumerable<TodoItem>>> GetTodos([FromQuery] int userId)
     {
         return await _context.TodoItems
-                             .Where(t => t.OwnerId == userId)
+                             .Where(t => t.OwnerId == userId && t.DeletedAt == null) // Filter condition
                              .ToListAsync();
     }
 
@@ -68,7 +68,13 @@ public class TodosController : ControllerBase
         var todo = await _context.TodoItems.FindAsync(id);
         if (todo == null) return NotFound();
 
-        _context.TodoItems.Remove(todo);
+        // To perform HARD delete
+        //_context.TodoItems.Remove(todo);
+
+        // To perform SOFT delete
+        todo.DeletedAt = DateTime.UtcNow;
+        _context.Entry(todo).State = EntityState.Modified;
+
         await _context.SaveChangesAsync();
 
         return NoContent();

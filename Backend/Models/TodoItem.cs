@@ -7,4 +7,5 @@ public class TodoItem
     public bool IsDone { get; set; }
     public int OwnerId { get; set; }
     public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
+    public DateTime? DeletedAt { get; set; }
 }

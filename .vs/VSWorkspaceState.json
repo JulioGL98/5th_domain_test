@@ -2,12 +2,14 @@
   "ExpandedNodes": [
     "",
     "\\Backend",
+    "\\Backend\\Controllers",
+    "\\Backend\\Models",
     "\\frontend",
     "\\frontend\\src",
     "\\frontend\\src\\context",
     "\\frontend\\src\\pages",
     "\\frontend\\src\\services"
   ],
-  "SelectedNode": "\\frontend\\src\\pages\\TodosPage.tsx",
+  "SelectedNode": "\\Backend\\Controllers\\TodosController.cs",
   "PreviewInSolutionExplorer": false
 }
