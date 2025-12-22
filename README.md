@@ -4,13 +4,22 @@ Full Stack task management APP built with .NET 10 and React.
 
 ## Tech Stack
 
-- **Backend:** C# .NET 10 Web API, Entity Framework Core, SQLite.
-- **Frontend:** React 18, TypeScript, Vite, Tailwind CSS.
-- **Arquitectura:** Simplified Repository Pattern, Code-First approach.
+### Backend
+- **Framework:** .NET 10 Web API (C#)
+- **ORM:** Entity Framework Core
+- **Database:** SQLite
+- **Security:** BCrypt.Net + System.IdentityModel.Tokens.Jwt
+- **Documentation:** Swagger UI
 
-## How to Run the Project
+### Frontend
+- **Framework:** React (via Vite)
+- **Language:** TypeScript
+- **Styling:** TailwindCSS
+- **HTTP Client:** Axios (with Interceptors)
 
-### Prerequisites
+# How to Run the Project
+
+## Prerequisites
 - .NET 10 SDK
 - Node.js (LTS)
 
@@ -21,9 +30,16 @@ cd Backend
 dotnet restore
 dotnet ef database update
 ```
-# Run server
+### Run server
 ```bash
+cd Backend
 dotnet run
+```
+### Frontend Setup
+```bash
+cd frontend
+npm install
+npm run dev
 ```
 ## Database Workflow
 
