@@ -3776,19 +3776,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\pepor\\.nuget\\packages\\": {}
+    "C:\\Users\\jgonzalez\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\pepor\\Downloads\\Julio\\5th_domain_test\\Backend\\Backend.csproj",
+      "projectUniqueName": "C:\\Users\\jgonzalez\\Downloads\\Julio\\5th_domain_test\\Backend\\Backend.csproj",
       "projectName": "Backend",
-      "projectPath": "C:\\Users\\pepor\\Downloads\\Julio\\5th_domain_test\\Backend\\Backend.csproj",
-      "packagesPath": "C:\\Users\\pepor\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\pepor\\Downloads\\Julio\\5th_domain_test\\Backend\\obj\\",
+      "projectPath": "C:\\Users\\jgonzalez\\Downloads\\Julio\\5th_domain_test\\Backend\\Backend.csproj",
+      "packagesPath": "C:\\Users\\jgonzalez\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\jgonzalez\\Downloads\\Julio\\5th_domain_test\\Backend\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\pepor\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\jgonzalez\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -3796,6 +3801,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
