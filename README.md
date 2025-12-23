@@ -56,3 +56,28 @@ Updates changes. Run in Backed folder:
 ```bash
 dotnet ef migrations add NameOfChange
 ```
+
+# Docker Workflow
+### Build and Run
+```bash
+docker-compose up --build
+```
+### Stop the App
+```bash
+docker-compose down
+```
+### Reset Data
+```bash
+docker-compose down -v
+```
+### Clean Cache
+```bash
+# 1. Stop and remove volumes
+docker-compose down -v
+
+# 2. Clean Docker Build Cache
+docker builder prune -f
+
+# 3. Rebuild from scratch
+docker-compose up --build --force-recreate
+```
