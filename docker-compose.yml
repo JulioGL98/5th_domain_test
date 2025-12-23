@@ -1,0 +1,27 @@
+services:
+  backend:
+    build: ./Backend
+    container_name: todo-backend
+    ports:
+      - "5068:8080"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ConnectionStrings__DefaultConnection=Data Source=/app/persistence/app.db
+    volumes:
+      - ./Backend:/app/persistence
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+      args:
+        - VITE_API_URL=http://localhost:5068/api
+    container_name: todo-frontend
+    ports:
+      - "5173:80"
+    depends_on:
+      - backend
+
+# Definimos el volumen al final
+volumes:
+  sqlite_data:

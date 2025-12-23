@@ -5,7 +5,8 @@ import { TodosPage } from './pages/TodosPage';
 import { useAuth } from './context/AuthContext';
 import { RegisterPage } from './pages/RegisterPage';
 
-const PrivateRoute = ({ children }: { children: JSX.Element }) => {
+import type { ReactElement } from 'react';
+const PrivateRoute = ({ children }: { children: ReactElement }) => {
   const { isAuthenticated } = useAuth();
   return isAuthenticated ? children : <Navigate to="/login" />;
 };
