@@ -5,7 +5,7 @@ Full Stack task management APP built with .NET 10 and React.
 ## Tech Stack
 
 ### Backend
-- **Framework:** .NET 10 Web API (C#)
+- **Framework:** .NET 8 Web API (C#)
 - **ORM:** Entity Framework Core
 - **Database:** SQLite
 - **Security:** BCrypt.Net + System.IdentityModel.Tokens.Jwt
@@ -20,7 +20,7 @@ Full Stack task management APP built with .NET 10 and React.
 # How to Run the Project
 
 ## Prerequisites
-- .NET 10 SDK
+- .NET 8 SDK
 - Node.js (LTS)
 
 ### Setup and Start the Backend
