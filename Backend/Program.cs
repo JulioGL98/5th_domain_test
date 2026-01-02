@@ -28,11 +28,11 @@ using (var scope = app.Services.CreateScope())
     {
         var context = services.GetRequiredService<AppDbContext>();
         context.Database.Migrate(); 
-        Console.WriteLine("--> Base de datos migrada exitosamente en Docker.");
+        Console.WriteLine("--> Success migrating BD");
     }
     catch (Exception ex)
     {
-        Console.WriteLine($"--> Error crítica migrando DB: {ex.Message}");
+        Console.WriteLine($"--> Error: {ex.Message}");
     }
 }
 app.Run();
