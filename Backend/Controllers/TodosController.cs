@@ -73,7 +73,6 @@ public class TodosController : ControllerBase
 
         // To perform SOFT delete
         todo.DeletedAt = DateTime.UtcNow;
-        _context.Entry(todo).State = EntityState.Modified;
 
         await _context.SaveChangesAsync();
 
