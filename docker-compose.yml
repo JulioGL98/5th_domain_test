@@ -22,6 +22,6 @@ services:
     depends_on:
       - backend
 
-# Definimos el volumen al final
+# Final volume
 volumes:
   sqlite_data:

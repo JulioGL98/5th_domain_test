@@ -1,28 +1,26 @@
 # Backend/Dockerfile
 
-# 1. Imagen de construcción
+# 1. Build image
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /src
 
-# Copiar csproj y restaurar
+# Copy csproj and restore
 COPY ["Backend.csproj", "./"]
 RUN dotnet restore "Backend.csproj"
 
-# Copiar todo lo demás
+# Copy everything else
 COPY . .
 
-# --- IMPORTANTE: NO EJECUTAR 'dotnet ef' AQUÍ ---
-# El código en Program.cs se encargará de la DB al iniciar.
-
-# Publicar
+# The code in Program.cs will handle the DB on startup.
+# Publish
 RUN dotnet publish "Backend.csproj" -c Release -o /app/publish /p:UseAppHost=false
 
-# 2. Imagen final de ejecución
+# 2. Final runtime image
 FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS final
 WORKDIR /app
 COPY --from=build /app/publish .
 
-# Crear carpeta para la DB y dar permisos
+# Create folder for the DB and set permissions
 RUN mkdir -p /app/data && chmod 777 /app/data
 
 EXPOSE 8080
