@@ -27,7 +27,8 @@ public class AuthService
         return new UserDto
         {
             Id = user.Id,
-            Username = user.Username
+            Username = user.Username,
+            Role = user.Role.ToString()
         };
     }
 
@@ -54,7 +55,8 @@ public class AuthService
         return new UserDto
         {
             Id = newUser.Id,
-            Username = newUser.Username
+            Username = newUser.Username,
+            Role = newUser.Role.ToString()
         };
     }
 }

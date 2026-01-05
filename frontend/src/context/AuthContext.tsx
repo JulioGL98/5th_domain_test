@@ -9,6 +9,8 @@ interface AuthContextType {
   logout: () => void;
   isAuthenticated: boolean;
   isLoading: boolean;
+  isAdmin: boolean;
+  isPremium: boolean;
 }
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
@@ -41,8 +43,12 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
     localStorage.removeItem('todo_user');
   };
 
+  // Role helpers
+  const isAdmin = user?.role === 'Admin';
+  const isPremium = user?.role === 'Premium' || user?.role === 'Admin';
+
   return (
-    <AuthContext.Provider value={{ user, login, logout, isAuthenticated: !!user, isLoading: loading }}>
+    <AuthContext.Provider value={{ user, login, logout, isAuthenticated: !!user, isLoading: loading, isAdmin, isPremium }}>
       {loading ? null : children} 
     </AuthContext.Provider>
   );

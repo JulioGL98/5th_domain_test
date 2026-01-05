@@ -3,6 +3,7 @@
 export interface User {
   id: number;
   username: string;
+  role: 'User' | 'Premium' | 'Admin';
 }
 
 export interface TodoItem {
@@ -16,4 +17,5 @@ export interface TodoItem {
 export interface LoginResponse {
   id: number;
   username: string;
+  role: 'User' | 'Premium' | 'Admin';
 }
