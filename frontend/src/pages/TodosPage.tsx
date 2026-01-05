@@ -11,6 +11,9 @@ export const TodosPage = () => {
 
   const [editingId, setEditingId] = useState<number | null>(null);
   const [editTitle, setEditTitle] = useState('');
+  
+  // Loading state for bulk actions
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     if (user) {
@@ -27,6 +30,11 @@ export const TodosPage = () => {
       console.error('Error loading tasks:', error);
     }
   };
+
+  // Computed values
+  const completedCount = todos.filter(t => t.isDone).length;
+  const pendingCount = todos.filter(t => !t.isDone).length;
+  const allCompleted = todos.length > 0 && todos.every(t => t.isDone);
 
   const handleAdd = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -75,6 +83,42 @@ export const TodosPage = () => {
     }
   };
 
+  // Toggle all tasks
+  const handleToggleAll = async () => {
+    if (!user) return;
+    setLoading(true);
+
+    try {
+      if (allCompleted) {
+        await todoService.uncompleteAll(user.id);
+      } else {
+        await todoService.completeAll(user.id);
+      }
+      await loadTodos();
+    } catch (error) {
+      console.error('Error toggling all tasks:', error);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  //Delete all completed tasks
+  const handleDeleteCompleted = async () => {
+    if (!user) return;
+    if (!confirm(`Are you sure you want to delete ${completedCount} completed task(s)?`)) return;
+
+    setLoading(true);
+
+    try {
+      await todoService.deleteCompleted(user.id);
+      await loadTodos();
+    } catch (error) {
+      console.error('Error deleting completed tasks:', error);
+    } finally {
+      setLoading(false);
+    }
+  };
+  
   const formatDate = (dateString: string) => {
     if (!dateString) return '-';
     return new Date(dateString).toLocaleString('en-US', {
@@ -116,6 +160,26 @@ export const TodosPage = () => {
             Add
           </button>
         </form>
+
+        {todos.length > 0 && (
+          <div className="flex gap-4 mb-4">
+            <button
+              onClick={handleToggleAll}
+              disabled={loading}
+              className="bg-blue-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-blue-700 shadow-sm transition disabled:opacity-50"
+            >
+              {allCompleted ? `Uncheck All (${todos.length})` : `Check All (${pendingCount})`}
+            </button>
+
+            <button
+              onClick={handleDeleteCompleted}
+              disabled={loading || completedCount === 0}
+              className="bg-red-500 text-white px-4 py-2 rounded-lg font-medium hover:bg-red-600 shadow-sm transition disabled:opacity-50"
+            >
+              Delete Completed ({completedCount})
+            </button>
+          </div>
+        )}
 
         <div className="bg-white rounded-lg shadow overflow-hidden">
           <table className="w-full">

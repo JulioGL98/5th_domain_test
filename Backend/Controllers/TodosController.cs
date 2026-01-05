@@ -78,4 +78,60 @@ public class TodosController : ControllerBase
 
         return NoContent();
     }
+
+    // Mark all as completed
+    [HttpPut("complete-all")]
+    public async Task<IActionResult> CompleteAllTodos([FromQuery] int userId)
+    {
+        var todos = await _context.TodoItems
+            .Where(t => t.OwnerId == userId && t.DeletedAt == null && !t.IsDone)
+            .ToListAsync();
+
+        foreach (var todo in todos)
+        {
+            todo.IsDone = true;
+        }
+
+        await _context.SaveChangesAsync();
+        
+        return Ok(new { updatedCount = todos.Count });
+    }
+
+    // Unmark all (set as not completed)
+    [HttpPut("uncomplete-all")]
+    public async Task<IActionResult> UncompleteAllTodos([FromQuery] int userId)
+    {
+        var todos = await _context.TodoItems
+            .Where(t => t.OwnerId == userId && t.DeletedAt == null && t.IsDone)
+            .ToListAsync();
+
+        foreach (var todo in todos)
+        {
+            todo.IsDone = false;
+        }
+
+        await _context.SaveChangesAsync();
+        
+        return Ok(new { updatedCount = todos.Count });
+    }
+
+    // Delete all completed tasks (soft delete)
+    [HttpDelete("completed")]
+    public async Task<IActionResult> DeleteCompletedTodos([FromQuery] int userId)
+    {
+        var completedTodos = await _context.TodoItems
+            .Where(t => t.OwnerId == userId && t.DeletedAt == null && t.IsDone)
+            .ToListAsync();
+
+        var now = DateTime.UtcNow;
+        foreach (var todo in completedTodos)
+        {
+            todo.DeletedAt = now;
+        }
+
+        await _context.SaveChangesAsync();
+        
+        return Ok(new { deletedCount = completedTodos.Count });
+    }
+    
 }
