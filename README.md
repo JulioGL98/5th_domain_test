@@ -1,6 +1,6 @@
 # ToDo App
 
-Full Stack task management APP built with .NET 10 and React.
+Full Stack task management APP built with .NET 8 and React.
 
 ## Tech Stack
 
@@ -8,7 +8,7 @@ Full Stack task management APP built with .NET 10 and React.
 - **Framework:** .NET 8 Web API (C#)
 - **ORM:** Entity Framework Core
 - **Database:** SQLite
-- **Security:** BCrypt.Net + System.IdentityModel.Tokens.Jwt
+- **Security:** BCrypt.Net
 - **Documentation:** Swagger UI
 
 ### Frontend
